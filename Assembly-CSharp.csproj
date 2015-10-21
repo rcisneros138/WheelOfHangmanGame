@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{A9675890-F298-7F6A-DDFC-5555EF743696}</ProjectGuid>
+	<ProjectGuid>{619A5A8B-D5B6-6617-A6AE-7596CA1AA7BC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,7 +45,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AlphabetButton.cs" />
+     <Compile Include="Assets\ButtonClick.cs" />
      <Compile Include="Assets\Cubescript.cs" />
+     <Compile Include="Assets\Hangman.cs" />
+     <Compile Include="Assets\LetterGuess_GameManager.cs" />
      <Compile Include="Assets\WordPuzzle.cs" />
      <Compile Include="Assets\spin.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//BFT TODO: Rename this class
 public class Cubescript : MonoBehaviour
 {
     public AnimationCurve animationCurve;
@@ -15,7 +16,7 @@ public class Cubescript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButton(0) && !spinning)
+        if (Input.GetMouseButton(1) && !spinning)
         {
             StartCoroutine(DoSpin(10.0f, Random.Range(2000, 3000)));
         }
