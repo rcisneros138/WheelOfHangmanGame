@@ -2,7 +2,7 @@
 using System.Collections;
 
 //BFT TODO: Rename this class
-public class Cubescript : MonoBehaviour
+public class WheelScript : MonoBehaviour
 {
     public AnimationCurve animationCurve;
 
