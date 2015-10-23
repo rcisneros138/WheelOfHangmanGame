@@ -32,11 +32,13 @@ public class LetterGuess_GameManager : MonoBehaviour {
 
     }
 
-    public string letter;
+    
     public void Letter_ButtonClick(string letter)
     {
+        GameObject.Find("GameController").GetComponent<Hangman>().ReplaceDashWithCharacter(letter[0]);
+ 
        
-        this.letter = letter;
+
         
     }
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,70 +8,70 @@ using System.Linq;
 public class Hangman : MonoBehaviour {
 
 
-
+    
     public Text LetterIndicator;
+    public Text ScoreIndicator;
 
-    public string randomWord = "HELLO";           
-    private string hiddenWord;            
-    public string inputChar;           
+
+    public string randomWord;          
+    public string hiddenWord;
+    public bool match;
+    public bool won;
+    public int Player1Score;
+    public string oldHiddenWord;
+    public List<char> guessedLetters;
+            
+    
 
     // Use this for initialization
-    void Start()
+
+   public void ChooseWord()
     {
+
+    }
+   public void Start()
+    {
+
+        randomWord = "HELLO";
+        Player1Score = 6;
 
         for (int i = 0; i < randomWord.Length; i++)
         {
             hiddenWord += "-";
         }
-
-        Display();
+        LetterIndicator.text = hiddenWord;
+        ScoreIndicator.text = "Player 1 Score: " + Player1Score.ToString();
     }
-       
     //Check if the word matches input word
-    void CheckChar()
+    public void ReplaceDashWithCharacter(char userInput)
     {
         int charIndex = 0;
-
-        //Search the array of chars of the random string
+        AddToScore(userInput);
         for (int i = 0; i < randomWord.Length; i++)
         {
-            //Conversion to string is needed for a direct comparing
-            if (randomWord[i].ToString() == inputChar)
+            if (randomWord[i] == userInput)
             {
-                //Set the index for each loop pass. Used to set which char need to be replaced
+                Player1Score++;
                 charIndex = i;
-
-                //Remove character that has been found from
                 hiddenWord = hiddenWord.Remove(charIndex, 1);
+                hiddenWord = hiddenWord.Insert(charIndex, userInput.ToString());
 
-                //Assign the correct char to the full result string
-                hiddenWord = hiddenWord.Insert(charIndex, inputChar);
-                
-
-                //Debug.Log("Correct Char: " + hiddenWord[charIndex]);
             }
+               
         }
-    }
-    void Display()
-    {
 
-        //LetterGuess_GameManager manager = new LetterGuess_GameManager();
-       
         
         LetterIndicator.text = hiddenWord;
-
-        //inputChar = manager.letter;
-        inputChar = GUI.TextField(new Rect(10, 70, 200, 20), inputChar, 1);
-        
-
-        if (GUI.Button(new Rect(220, 70, 80, 20), "Submit"))
+        ScoreIndicator.text = "Player 1 Score: " + Player1Score.ToString();
+        //AddToScore();
+    }
+    public void AddToScore(char userInput)
+    {
+        guessedLetters.Add(userInput);
+        if (guessedLetters.Contains(userInput))
         {
-           
-            if (!string.IsNullOrEmpty(inputChar))
-                CheckChar();
-
             
-            inputChar = "";
         }
+        
     }
 }

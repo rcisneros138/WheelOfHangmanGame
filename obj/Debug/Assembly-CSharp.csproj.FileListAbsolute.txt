@@ -20,3 +20,7 @@ C:\Users\rcisneros_be\Documents\WheelOfHangman\Temp\bin\Debug\UnityEngine.Networ
 C:\Users\rcisneros_be\Documents\WheelOfHangman\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\rcisneros_be\Documents\WheelOfHangman\obj\Debug\Assembly-CSharp.dll
 C:\Users\rcisneros_be\Documents\WheelOfHangman\obj\Debug\Assembly-CSharp.pdb
+C:\Users\rcisneros_be\Documents\WheelOfHangman\Temp\bin\Debug\UnityEngine.Advertisements.dll
+C:\Users\rcisneros_be\Documents\WheelOfHangman\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\rcisneros_be\Documents\WheelOfHangman\Temp\bin\Debug\UnityEngine.Advertisements.xml
+C:\Users\rcisneros_be\Documents\WheelOfHangman\Temp\bin\Debug\UnityEngine.Analytics.xml
