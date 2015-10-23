@@ -35,11 +35,9 @@ public class LetterGuess_GameManager : MonoBehaviour {
     
     public void Letter_ButtonClick(string letter)
     {
-        GameObject.Find("GameController").GetComponent<Hangman>().ReplaceDashWithCharacter(letter[0]);
- 
-       
-
-        
+        GameObject.Find("GameController").GetComponent<Hangman>().CheckInput(letter[0]);
+        //GameObject.Find("GameController").GetComponent<Hangman>().AddToScore(letter[0]);
     }
+
 
 }
